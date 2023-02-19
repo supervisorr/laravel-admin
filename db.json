@@ -1,0 +1,111 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Title Post 1.1",
+            "content": "Content Post 1.1",
+            "user_id": 1,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "title": "Title Post 1.2",
+            "content": "Content Post 1.2",
+            "user_id": 1,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "title": "Title Post 1.3",
+            "content": "Content Post 1.3",
+            "user_id": 1,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 4,
+            "title": "Title Post 2.1",
+            "content": "Content Post 2.1",
+            "user_id": 2,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 5,
+            "title": "Title Post 2.2",
+            "content": "Content Post 2.2",
+            "user_id": 2,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 6,
+            "title": "Title Post 3.1",
+            "content": "Content Post 3.1",
+            "user_id": 3,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        }
+    ],
+    "users": [
+        {
+            "id": 4,
+            "name": "Delaney Bayer",
+            "email": "prudence.marks@example.net",
+            "owner": false,
+            "photo": null,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "owner": true,
+            "photo": null,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 6,
+            "name": "Kristian Greenholt",
+            "email": "murray.brown@example.org",
+            "owner": false,
+            "photo": null,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "name": "Marcelino Huel",
+            "email": "murphy.jasper@example.com",
+            "owner": false,
+            "photo": null,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 5,
+            "name": "Myrtis Kemmer",
+            "email": "monahan.alfreda@example.com",
+            "owner": false,
+            "photo": null,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "name": "Napoleon Kuhic",
+            "email": "keeling.derick@example.net",
+            "owner": false,
+            "photo": null,
+            "created_at": "2023-02-18 17:14:00",
+            "deleted_at": null
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}

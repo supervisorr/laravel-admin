@@ -1,0 +1,55 @@
+<template>
+  <div>
+    <base-card class="d-flex flex-column">
+      <v-card-text>
+        <v-chip
+          class="rounded-full h-10 w-10 flex items-center justify-center mb-2"
+          :color="chipColor"
+        >
+          <v-icon :class="colorIcon" class="flex items-center justify-center text-lg">{{ cardIcon }}</v-icon>
+        </v-chip>
+        <p class="text-xs m-0 text--disabled">{{ title }}</p>
+        <h4>{{ amount }}</h4>
+        <p class="mb-0" :class="footerClass">{{ footerText }}</p>
+      </v-card-text>
+    </base-card>
+  </div>
+</template>
+<script>
+export default {
+  props: {
+    cardIcon: {
+      type: String,
+      default: "mdi-chart-pie",
+    },
+    colorIcon: {
+      type: String,
+      default: "text-primary",
+    },
+    chipColor: {
+      type: String,
+      default: "warning",
+    },
+    title: {
+      type: String,
+      default: "test",
+    },
+    // chipText: {
+    //   type: String,
+    //   default: "A"
+    // },
+    amount: {
+      type: String,
+      default: "95065",
+    },
+    footerText: {
+      type: String,
+      default: "hello world",
+    },
+    footerClass: {
+      type: String,
+      default: "text-gray-700",
+    },
+  },
+};
+</script>

@@ -4,8 +4,8 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
+/node_modules
 node_modules/
-dist/
 
 # Compiled Java class files
 *.class
@@ -48,3 +48,17 @@ Thumbs.db
 *.mov
 *.wmv
 
+/public/css
+/public/hot
+/public/js
+/public/mix-manifest.json
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
