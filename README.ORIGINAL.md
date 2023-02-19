@@ -9,9 +9,8 @@ A demo application to illustrate how Inertia.js works.
 Clone the repo locally:
 
 ```sh
-git clone git@github.com:supervisorr/laravel-admin.git laravel-admin-test
-
-cd laravel-admin-test
+git clone https://github.com/inertiajs/pingcrm.git pingcrm
+cd pingcrm
 ```
 
 Install PHP dependencies:
@@ -35,7 +34,7 @@ npm run dev
 Setup configuration:
 
 ```sh
-cp .env.local .env
+cp .env.example .env
 ```
 
 Generate application key:
@@ -44,22 +43,10 @@ Generate application key:
 php artisan key:generate
 ```
 
-Clear All caches:
-
-```sh
-php artisan cache:clear && php artisan route:clear && php artisan config:clear && php artisan view:clear && php artisan optimize:clear
-```
-
-Before create an SQLite database, modify the following line in the ".env" file, defining the absolute path to the SQLite database: 
-
-```sh
-DB_DATABASE=/Users/akorotkov/projects/laravel/laravel-admin-test/database/database.sqlite
-```
-
 Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
 
 ```sh
-rm -f database/database.sqlite && touch database/database.sqlite
+touch database/database.sqlite
 ```
 
 Run database migrations:
@@ -77,7 +64,7 @@ php artisan db:seed
 Run the dev server (the output will give the address):
 
 ```sh
-npm run rst
+php artisan serve
 ```
 
 You're ready to go! Visit Ping CRM in your browser, and login with:
