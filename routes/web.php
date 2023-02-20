@@ -5,12 +5,8 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\OrganizationsController;
-// use App\Http\Controllers\ClientesController;
-// use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\ChartsController;
-// use App\Http\Controllers\ConnectionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,18 +39,6 @@ Route::post('login', [AuthenticatedSessionController::class, 'store'])
     ->name('login.store')
     // ->middleware('guest', 'authipglobal')
     ;
-
-
-//$limiter = config('fortify.limiters.login');
-//
-//Route::post('login', [AuthenticatedSessionController::class, 'store'])->middleware(
-//    array_filter([
-//        'authipglobal',
-//        'guest:' . config('fortify.guard'),
-//        'guest:' . config('fortify.guard'),
-//        $limiter ? 'throttle:' . $limiter : null,
-//    ]));
-
 
 Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
@@ -144,15 +128,6 @@ Route::get('/img/{path}', [ImagesController::class, 'show'])
     ->where('path', '.*')
     ->name('image');
 
-
-// // Charts/Analíticas
-
-// Route::get('charts', [ChartsController::class, 'index'])
-//     ->name('charts')
-//     ->middleware('auth');
-
-
-
 // // TEST !!!
 // //analytics
 // Route::get('аналитика', [ConnectionsController::class, 'index'])
@@ -163,4 +138,3 @@ Route::get('/img/{path}', [ImagesController::class, 'show'])
 // Route::get('в джазе только девушки', [ConnectionsController::class, 'index'])
 //     ->name('в джазе только девушки')
 //     ->middleware('auth');
-

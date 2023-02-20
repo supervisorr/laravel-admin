@@ -12,6 +12,8 @@ Clone the repo locally:
 git clone git@github.com:supervisorr/laravel-admin.git laravel-admin-test
 
 cd laravel-admin-test
+
+git checkout develop
 ```
 
 Install PHP dependencies:
