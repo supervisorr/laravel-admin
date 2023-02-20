@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api\V1\PostsController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,14 +16,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Users
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('users', [UsersController::class, 'index'])
-//     ->name('users')
-//     ->middleware('auth:api');
+// Posts
 
-// Route::get('users', [UsersController::class, 'index'])
-//     ->name('users')
-//     ->middleware('auth');
+Route::prefix('posts')->group(function () {
+    Route::get('/', [PostsController::class, 'index'])->name('getAllPosts');
+});
+
+// Route::get('/', [JuegoController::class, 'index'])->name('getAllJuegos');
+// Route::post('/', [JuegoController::class, 'store'])->name('addJuego')->middleware('auth:sanctum');
+
+Route::prefix('posts')->group(function () {
+    Route::post('/', [PostsController::class, 'store'])->name('addPost');
+});
+

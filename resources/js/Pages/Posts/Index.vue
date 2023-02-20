@@ -31,7 +31,7 @@
           </td>
           <td class="border-t px-6 py-4 items-center focus:text-indigo-500">
             <inertia-link class="px-6 py-4 flex items-center" :href="route('users.edit', post.userId)" tabindex="-1">
-              {{ post.userName }}
+              {{ post.author }}
             </inertia-link>
           </td>
           <td class="border-t px-6 py-4 items-center focus:text-indigo-500">

@@ -12,6 +12,8 @@
         "ext-exif": "*",
         "ext-gd": "*",
         "fakerphp/faker": "^1.9.1",
+        "crazybooot/base64-validation": "^1.0",
+        "darkaonline/l5-swagger": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",

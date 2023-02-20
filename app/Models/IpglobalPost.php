@@ -45,10 +45,12 @@ class IpglobalPost extends Post
             foreach ($responseBody["posts"] as $post) {
 
                 $userName = $post['user_id'];
+                $userData = array();
 
                 foreach($usersData as $user) {
                     if($post['user_id'] == $user['id']) {
                         $userName = $user['name'];
+                        $userData = $user;
                         break;
                     }
                 }
@@ -58,7 +60,8 @@ class IpglobalPost extends Post
                     'title' => $post['title'],
                     'content' => $post['content'],
                     'userId' => $post['user_id'],
-                    'userName' => $userName,
+                    'author' => $userName,
+                    'user' => $userData,
                     'createdAt' => $post['created_at'],
                     'deletedAt' => $post['deleted_at'],
                 );

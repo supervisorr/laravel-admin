@@ -37,7 +37,7 @@ npm run dev
 Setup configuration:
 
 ```sh
-cp .env.local .env
+cp .env.example .env
 ```
 
 Generate application key:
@@ -52,10 +52,10 @@ Clear All caches:
 php artisan cache:clear && php artisan route:clear && php artisan config:clear && php artisan view:clear && php artisan optimize:clear
 ```
 
-Before create an SQLite database, modify the following line in the ".env" file, defining the absolute path to the SQLite database: 
+Before create an SQLite database, modify the following line in the ".env" file, defining the absolute path to the SQLite database, e.g: 
 
 ```sh
-DB_DATABASE=/Users/akorotkov/projects/laravel/laravel-admin-test/database/database.sqlite
+DB_DATABASE=/Users/akorotkov/projects/laravel/laravel-admin/database/database.sqlite
 ```
 
 Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.

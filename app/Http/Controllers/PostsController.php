@@ -94,12 +94,6 @@ class PostsController extends Controller
 
         $ipglobalPost = new IpglobalPost($this->ipglobalService);
 
-    //     Auth::user()->account->posts()->create([
-    //         'title' => Request::get('title'),
-    //         'content' => Request::get('content'),
-    //         'user_id' => Request::get('userId'),
-    //    ]);
-
         DB::table('posts')->insertOrIgnore([
             [
                 // 'id' => 1, 
