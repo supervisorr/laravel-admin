@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PostsapiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\OrganizationsController;
@@ -18,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 
 /**
  * Cambio de idioma
@@ -123,6 +123,9 @@ Route::post('posts', [PostsController::class, 'store'])
     ->name('posts.store')
     ->middleware('auth');
 
+Route::get('postsapi', [PostsApiController::class, 'index'])
+    ->name('postsapi')
+    ->middleware('auth');
 
 Route::get('/img/{path}', [ImagesController::class, 'show'])
     ->where('path', '.*')

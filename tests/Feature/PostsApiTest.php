@@ -47,7 +47,7 @@ class PostsApiTest extends TestCase
                             ->where('userData.photo', null)
                             ->where('userData.created_at', '2023-02-18 17:14:00')
                             ->where('userData.deleted_at', null)
-                            ->where('createdAt', '2023-02-17 17:14:00')
+                            ->where('createdAt', '2023-02-18 17:14:00')
                             ->where('deletedAt', null)
                             // ->missing('password')
                             ->etc()
@@ -56,7 +56,7 @@ class PostsApiTest extends TestCase
     }
 
     /**
-     * A api posts test example.
+     * A api posts ko test example.
      */
     public function test_a_api_post_request_with_empty_body(): void
     {
@@ -67,15 +67,16 @@ class PostsApiTest extends TestCase
 
         $response
             ->assertStatus(220)
-            ->assertJson(
-                [[
-                'The given data was invalid.',
-            ]]
-            );
-    }
+            ->assertJson([ 
+                    'error' => true,
+                    'message' => [
+                        'The given data was invalid.',
+                    ]
+            ]);
+   }
 
     /**
-     * A api posts test example.
+     * A api posts ko test example.
      */
     public function test_a_api_post_request_with_empty_user(): void
     {
@@ -91,15 +92,16 @@ class PostsApiTest extends TestCase
         $response
             ->assertStatus(220)
             ->assertHeader('access-control-allow-origin', '*')
-            ->assertJson(
-                [[
-                'The given data was invalid.',
-            ]]
-            );
+            ->assertJson([ 
+                    'error' => true,
+                    'message' => [
+                        'The given data was invalid.',
+                    ]
+            ]);
     }
 
     /**
-     * A api posts test example.
+     * A api posts ok test example.
      */
     public function test_a_api_post_request_ok(): void
     {
@@ -114,10 +116,11 @@ class PostsApiTest extends TestCase
 
         $response
             ->assertStatus(201)
-            ->assertJson(
-                [
-                'Post created.',
-            ]
-            );
+            ->assertJson([ 
+                'error' => false,
+                'message' => [
+                    'Post created.',
+                ]
+            ]);
     }
 }

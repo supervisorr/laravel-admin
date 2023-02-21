@@ -21,6 +21,12 @@
         <div :class="isUrl('posts') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Posts</div>
       </inertia-link>
     </div>
+    <div class="mb-4">
+      <inertia-link class="flex items-center group py-3" :href="route('postsapi')">
+        <icon name="users" class="w-4 h-4 mr-2" :class="isUrl('postsapi') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'" />
+        <div :class="isUrl('postsapi') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">Posts Api</div>
+      </inertia-link>
+    </div>
   </div>
 </template>
 

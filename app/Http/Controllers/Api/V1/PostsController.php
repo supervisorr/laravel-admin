@@ -35,7 +35,6 @@ class PostsController extends Controller
      *   path="/api/posts",
      *   tags={"Posts"},
      *   description="Muestra todos los posts en formato JSON",
-     *   operationId="getAllPosts",
      *   @OA\Response(response=200, description="Success"),
      *   @OA\Response(response=401, description="No autorizado"),
      *   @OA\Response(response=500, description="Error interno del servidor")
@@ -55,12 +54,10 @@ class PostsController extends Controller
      *   tags={"Posts"},
      *   summary="Insertar un post",
      *   description="Insertar el registro de un post nuevo con parametros.",
-     *   operationId="addPost"
-     *
      *   @OA\Response(response=201, description="Se ha creado correctamente"),
-     *   @OA\Response(response=220, description="No se cumple todos los requisitos"),
+     *   @OA\Response(response=220, description="No se cumplen todos los requisitos"),
      *   @OA\Response(response=401, description="No autorizado"),
-     *   @OA\Response(response=500, description="Error interno del servidor")
+     *   @OA\Response(response=500, description="Error del servidor")
      * )
      *
      */
@@ -73,7 +70,13 @@ class PostsController extends Controller
                 'userId' => ['required', 'integer'],
             ]);
         } catch(Exception $e) {
-            return response()->json([array($e->getMessage())], 220);
+            return response()->json(
+                [
+                    'error' => true,
+                    'message' => array($e->getMessage())
+                ], 
+                220
+            );
         }
 
         $res = DB::table('posts')->insertOrIgnore([
@@ -86,6 +89,12 @@ class PostsController extends Controller
             ],
         ]);
 
-        return response()->json(array('Post created.'), 201);
+        return response()->json(
+            [
+                'error' => false,
+                'message' => array('Post created.')
+            ], 
+            201
+        );
     }
 }
