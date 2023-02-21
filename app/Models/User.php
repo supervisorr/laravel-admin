@@ -34,6 +34,11 @@ class User extends Authenticatable
         return $this->first_name.' '.$this->last_name;
     }
 
+    public function setAccountIdAttribute($account_id)
+    {
+        $this->attributes['account_id'] = $account_id;
+    }
+
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = Hash::needsRehash($password) ? Hash::make($password) : $password;

@@ -92,8 +92,18 @@ You're ready to go! Visit Ping CRM in your browser, and login with:
 To run the Ping CRM tests, run:
 
 ```
-phpunit
+php artisan test
 ```
+
+
+**Testing documentation:**
+
+[Laravel testing](https://laravel.com/docs/10.x/testing) 
+
+
+
+
+
 
 
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**

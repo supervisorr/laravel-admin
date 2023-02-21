@@ -28,10 +28,6 @@ Route::prefix('posts')->group(function () {
     Route::get('/', [PostsController::class, 'index'])->name('getAllPosts');
 });
 
-// Route::get('/', [JuegoController::class, 'index'])->name('getAllJuegos');
-// Route::post('/', [JuegoController::class, 'store'])->name('addJuego')->middleware('auth:sanctum');
-
 Route::prefix('posts')->group(function () {
     Route::post('/', [PostsController::class, 'store'])->name('addPost');
 });
-
